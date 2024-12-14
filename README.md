@@ -23,11 +23,11 @@ Ensure you have the following installed:
 
 ### Installation
 
-To install and set up mentorAI, follow these steps:
+To install and set up mentorIA, follow these steps:
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/mentorAI.git
+   git clone https://github.com/yourusername/mentorIA.git
 
 # Contributors
 
