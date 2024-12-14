@@ -4,7 +4,7 @@
 
 mentorAI is a self-study studio designed to leverage Large Language Models (LLMs) to build customized study sessions. The application interacts with AI by prompting it with questions and subjects related to the chosen theme. Additionally, mentorAI can scrape educational content from various sites like YouTube, making it a comprehensive tool for self-learning.
 
-## Features
+## Future Features
 
 - **AI-Powered Learning**: Utilizes LLMs to generate study material based on user prompts.
 - **Web Scraping**: Gathers additional resources and educational content from sites like YouTube.
