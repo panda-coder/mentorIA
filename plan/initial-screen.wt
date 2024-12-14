@@ -1,0 +1,12 @@
+include components-v1
+
+Computer id=wintest title="mentorIA" notes="""
+The name of the last-opened file is stored, and if the file still exists when the application starts again, it should automatically be opened.
+"""
+	MenuBar
+		MenuCategory category="Paths"
+			Button icon=new content="Create"
+			Button icon=file content="Load"
+			Button icon=close content=Exit
+		MenuCategory category="Help"
+	.wt-empty-page "Start by creating a new path..."
