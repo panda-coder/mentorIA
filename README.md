@@ -19,6 +19,7 @@ Ensure you have the following installed:
 
 - [Python](https://www.python.org/downloads/)
 - [Flet](https://flet.dev/)
+- [WireText](https://marketplace.visualstudio.com/items?itemName=SaxionSD.wiretext)
 
 ### Installation
 
