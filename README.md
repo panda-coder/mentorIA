@@ -27,3 +27,18 @@ To install and set up mentorAI, follow these steps:
 1. Clone the repository:
    ```bash
    git clone https://github.com/yourusername/mentorAI.git
+
+# Contributors
+
+[![Contributors](https://contrib.rocks/image?repo=panda-coder/mentorIA)](https://github.com/panda-coder/mentorIA/graphs/contributors)
+
+## License
+
+[MIT](./LICENSE)
+
+# Contact
+For any questions or feedback, feel free to reach out to us at:
+
+***Email***: fireball.vb@gmail.com
+
+***GitHub***: [panda-coder](https://github.com/panda-coder)
