@@ -1,0 +1,16 @@
+include components-v1
+
+define MainScreen(content)
+    Computer id=wintest title="mentorIA" notes=""" 
+
+    """
+        MenuBar
+            MenuCategory category="Paths"
+                Button icon=file content="Create"
+                Button icon=save content="Load"
+                Button icon=close content=Exit
+            MenuCategory category="Configuration"
+                Button icon=file-code content="LLM Providers"
+            MenuCategory category="Help"
+                Button icon=about content="About"
+        {content}
