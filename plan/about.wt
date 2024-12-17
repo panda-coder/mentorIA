@@ -1,0 +1,11 @@
+
+include "common.wt"
+
+MainScreen
+	Popup
+		p """**mentorAI** \n
+        **version**: 0.1.0 \n
+        **link**: https://github.com/panda-coder/mentorIA \n
+        """
+		.wt-columns
+			Button content="OK"
