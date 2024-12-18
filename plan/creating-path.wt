@@ -3,7 +3,7 @@ include "common.wt"
 
 MainScreen
 	Popup
-		TextArea label="Theme" value="""
+		TextArea label="Subject" value="""
 		Japanese JLPT1"""
 		.wt-columns
 			Button content="Create"
