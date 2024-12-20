@@ -29,6 +29,10 @@ To install and set up mentorIA, follow these steps:
    ```bash
    git clone https://github.com/yourusername/mentorIA.git
 
+# Errors
+
+For some instructions in case of [errors](docs/errors.md)
+
 # Contributors
 
 [![Contributors](https://contrib.rocks/image?repo=panda-coder/mentorIA)](https://github.com/panda-coder/mentorIA/graphs/contributors)
