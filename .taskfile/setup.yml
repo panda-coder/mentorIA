@@ -1,0 +1,9 @@
+version: '3'
+
+tasks:
+  venv:
+    cmds:
+      - python3 -m venv venv
+    prefix: 'venv'
+
+  
