@@ -1,0 +1,7 @@
+version: '3'
+
+output: prefixed
+
+includes:
+  setup: .taskfile/setup.yml
+  
