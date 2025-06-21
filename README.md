@@ -18,8 +18,29 @@ mentorIA is a self-study studio designed to leverage Large Language Models (LLMs
 Ensure you have the following installed:
 
 - [Python](https://www.python.org/downloads/)
-- [Flet](https://flet.dev/)
-- [WireText](https://marketplace.visualstudio.com/items?itemName=SaxionSD.wiretext)
+- [uv](https://docs.astral.sh/uv/) (Python package manager)
+
+### Installation
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/yourusername/mentorIA.git
+   cd mentorIA
+   ```
+
+2. Install dependencies:
+   ```bash
+   uv sync
+   ```
+
+3. Run the application:
+   ```bash
+   uv run python src/main.py
+   ```
+
+## Current Implementation
+
+The application has been refactored from Flet to Kivy for better stability and cross-platform support. See [README_KIVY.md](README_KIVY.md) for detailed information about the current implementation.marketplace.visualstudio.com/items?itemName=SaxionSD.wiretext)
 
 ### Installation
 
