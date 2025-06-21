@@ -1,0 +1,89 @@
+version: '3'
+
+vars:
+  APP_NAME: mentorIA
+  SRC_DIR: src
+  MAIN_FILE: "{{.SRC_DIR}}/main.py"
+
+tasks:
+  default:
+    desc: Show available tasks
+    cmds:
+      - task --list
+
+  run:
+    desc: Run the mentorIA application
+    cmds:
+      - uv run python {{.MAIN_FILE}}
+
+  run-normal:
+    desc: Run the application in normal window mode
+    cmds:
+      - echo "Setting window mode to NORMAL"
+      - sed -i 's/WINDOW_MODE = WindowConfig\.[A-Z]*/WINDOW_MODE = WindowConfig.NORMAL/' {{.SRC_DIR}}/core/config.py
+      - uv run python {{.MAIN_FILE}}
+      - echo "Restoring borderless mode"
+      - sed -i 's/WINDOW_MODE = WindowConfig\.[A-Z]*/WINDOW_MODE = WindowConfig.BORDERLESS/' {{.SRC_DIR}}/core/config.py
+
+  run-borderless:
+    desc: Run the application in borderless window mode
+    cmds:
+      - echo "Setting window mode to BORDERLESS"
+      - sed -i 's/WINDOW_MODE = WindowConfig\.[A-Z]*/WINDOW_MODE = WindowConfig.BORDERLESS/' {{.SRC_DIR}}/core/config.py
+      - uv run python {{.MAIN_FILE}}
+
+  run-fullscreen:
+    desc: Run the application in fullscreen mode
+    cmds:
+      - echo "Setting window mode to FULLSCREEN"
+      - sed -i 's/WINDOW_MODE = WindowConfig\.[A-Z]*/WINDOW_MODE = WindowConfig.FULLSCREEN/' {{.SRC_DIR}}/core/config.py
+      - uv run python {{.MAIN_FILE}}
+      - echo "Restoring borderless mode"
+      - sed -i 's/WINDOW_MODE = WindowConfig\.[A-Z]*/WINDOW_MODE = WindowConfig.BORDERLESS/' {{.SRC_DIR}}/core/config.py
+
+  install:
+    desc: Install project dependencies
+    cmds:
+      - uv sync
+
+  dev:
+    desc: Run the application in development mode
+    cmds:
+      - echo "Starting {{.APP_NAME}} in development mode"
+      - uv run python {{.MAIN_FILE}}
+
+  clean:
+    desc: Clean up generated files and caches
+    cmds:
+      - echo "Cleaning up {{.APP_NAME}}"
+      - find . -name "__pycache__" -type d -exec rm -rf {} + 2>/dev/null || true
+      - find . -name "*.pyc" -delete 2>/dev/null || true
+      - rm -f app_output.log 2>/dev/null || true
+      - echo "Cleanup completed"
+
+  config-show:
+    desc: Show current application configuration
+    cmds:
+      - echo "Current {{.APP_NAME}} configuration"
+      - grep "WINDOW_MODE" {{.SRC_DIR}}/core/config.py || echo "Configuration file not found"
+
+  config-reset:
+    desc: Reset configuration to defaults
+    cmds:
+      - echo "Resetting {{.APP_NAME}} configuration to defaults"
+      - sed -i 's/WINDOW_MODE = WindowConfig\.[A-Z]*/WINDOW_MODE = WindowConfig.BORDERLESS/' {{.SRC_DIR}}/core/config.py
+      - echo "Configuration reset to borderless window mode"
+
+  info:
+    desc: Show project information
+    cmds:
+      - echo "{{.APP_NAME}} - AI-Powered Self-Study Studio"
+      - echo "Framework Kivy"
+      - find {{.SRC_DIR}} -type f -name "*.py" | head -5
+
+  setup:
+    desc: Complete project setup
+    cmds:
+      - task: install
+      - echo "Setup completed! Running application"
+      - task: run
