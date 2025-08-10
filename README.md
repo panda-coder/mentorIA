@@ -6,10 +6,13 @@ mentorIA is a self-study studio designed to leverage Large Language Models (LLMs
 
 ## Future Features
 
-- **AI-Powered Learning**: Utilizes LLMs to generate study material based on user prompts.
+- **AI-Powered Learning**: Utilizes LLMs to generate study material based on user prompts (pre build in plugins).
 - **Web Scraping**: Gathers additional resources and educational content from sites like YouTube.
 - **Interactive Sessions**: Creates dynamic and engaging study sessions tailored to individual learning preferences.
 - **User-Friendly Interface**: Designed with ease of use in mind, making it accessible for all learners.
+- **Cross-Platform Compatibility**: Transitioning from Flet to Kivy for improved stability and support across multiple platforms.
+- **Gamification**: Incorporates elements of gamification to make learning more enjoyable and interactive.
+- **Flash cards**: Develops flashcard functionality to aid in memorization and recall.
 
 ## Getting Started
 
